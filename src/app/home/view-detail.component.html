@@ -1,0 +1,22 @@
+<h2>View Detail</h2>
+<ul *ngIf="book">
+  <li>
+    Id: {{book.id}}
+  </li>
+  <li>
+    Name: {{book.name}}
+  </li>
+  <li>
+    Price: {{book.price}}
+  </li>
+  <li>
+    Description: {{book.description}}
+  </li>
+</ul>
+<div *ngIf="book">
+ <button (click)="goBack()">Go Back</button>
+ <button (click)="updateBook(book.id)">Update</button>
+</div>
+<div>
+ <a [routerLink]="['/buy-book']">Buy Book</a>
+</div>

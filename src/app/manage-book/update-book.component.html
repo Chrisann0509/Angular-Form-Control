@@ -1,0 +1,21 @@
+<h2>Update Book</h2>
+<div *ngIf="book">
+ <div>
+    <label>Id: </label> {{book.id}}
+ </div>
+ <div>
+    <label>Name: </label>
+    <input [(ngModel)]="book.name" />
+ </div>
+ <div>
+    <label>Price: </label>
+    <input [(ngModel)]="book.price" />
+ </div>
+ <div>
+    <label>Short Description: </label>
+    <input [(ngModel)]="book.description" />
+ </div>
+ <div *ngIf="book">
+    <button (click)="goBack()">Go Back</button>
+ </div>
+</div>
